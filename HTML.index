@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI YouTube Clipper</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    p {
+      color: #cbd5e1;
+    }
+
+    input {
+      width: 90%;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 15px 25px;
+      border: none;
+      border-radius: 8px;
+      background: #2563eb;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    #message {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>AI YouTube Clipper</h1>
+
+    <p>Paste a YouTube video URL and turn it into short clips.</p>
+
+    <input
+      type="text"
+      id="youtubeUrl"
+      placeholder="Paste YouTube URL here"
+    >
+
+    <br>
+
+    <button onclick="createClips()">
+      Create AI Clips
+    </button>
+
+    <div id="message"></div>
+  </div>
+
+  <script>
+    function createClips() {
+      const url = document.getElementById("youtubeUrl").value;
+      const message = document.getElementById("message");
+
+      if (!url) {
+        message.textContent = "Please paste a YouTube URL first.";
+        return;
+      }
+
+      message.textContent =
+        "Your video has been submitted. AI clipping will be connected next!";
+    }
+  </script>
+
+</body>
+</html>
